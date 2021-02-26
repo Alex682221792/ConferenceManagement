@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Conference Management</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="track_title">Track List</string>
+    <string name="track_desc">Below you can see the conference schedule</string>
+    <string name="topics_title">Topics List</string>
+    <string name="topics_desc">Here you can add and delete conference topics</string>
+    <string name="new_topic_hint">Add conference topics</string>
+    <string name="new_topic_help_text">Use the format: Topic #duration. Exm: Kotlin 45min</string>
+    <string name="time_format">%1$d minutes</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="format_event_error">El nombre del evento contiene caracteres inválidos</string>
+    <string name="topics_item">Topics</string>
+    <string name="result_item">Result</string>
+    <string name="info_item">Info</string>
+    <string name="info_title">App Information</string>
+    <string name="info_subTitle">CONFERENCE TRACK MANAGEMENT</string>
+    <string name="info_desc">You are planning a big programming conference and have received many
+        proposals which have passed the initial screen process but you are having trouble fitting
+        them into the time constraints of the day — there are so many possibilities!
+        So you write a program to do it for you.
+        \n\n• The conference has multiple tracks each of which has a morning and afternoon session.
+        \n\n• Each session contains multiple talks.
+        \n\n• Morning sessions begin at 9am and must finish by 12 noon, for lunch.
+        \n\n• Afternoon sessions begin at 1pm and must finish in time for the networking event.
+        \n\n• The networking event can start no earlier than 4:00 and no later than 5:00.
+        \n\n• No talk title has numbers in it.
+        \n\n• All talk lengths are either in minutes (not hours) or lightning (5 minutes).
+        \n\n• Presenters will be very punctual; there needs to be no gap between sessions.</string>
+</resources>

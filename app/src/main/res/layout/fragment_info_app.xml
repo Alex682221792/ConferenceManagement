@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.info_app.InfoAppFragment">
+
+    <ScrollView
+        android:id="@+id/main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/general_padding">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_title" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/subTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/general_padding"
+                android:text="@string/info_subTitle" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/normalTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_desc" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

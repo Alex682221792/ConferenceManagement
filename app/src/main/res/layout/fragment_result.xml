@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/general_padding"
+    tools:context=".view.result.ResultFragment">
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/track_title" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/normalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/general_padding"
+        android:text="@string/track_desc" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

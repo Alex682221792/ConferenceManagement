@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="general_padding">20sp</dimen>
+    <dimen name="header_text_size">20sp</dimen>
+    <dimen name="subtitle_text_size">17sp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="icon_button_size">24sp</dimen>
+    <dimen name="icon_button_padding">5sp</dimen>
+    <dimen name="topic_item_size">100sp</dimen>
+    <dimen name="list_divider_size">10sp</dimen>
+    <dimen name="nav_bar_radius">10sp</dimen>
+</resources>
