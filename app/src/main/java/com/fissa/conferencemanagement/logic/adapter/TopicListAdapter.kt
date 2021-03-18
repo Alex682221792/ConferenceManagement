@@ -10,8 +10,9 @@ import com.fissa.conferencemanagement.R
 import com.fissa.conferencemanagement.logic.enums.DurationsEnum
 import com.fissa.conferencemanagement.model.TopicVO
 import com.fissa.conferencemanagement.view.topics.ITopicsController
+import com.google.android.material.snackbar.Snackbar
 
-class TopicListAdapter (private val context: Activity, private val topic: Array<TopicVO>,
+class TopicListAdapter (private val context: Activity, private val viewParent: View, private val topic: Array<TopicVO>,
                         private val topicController: ITopicsController?)
     : ArrayAdapter<TopicVO>(context, R.layout.topic_row_item, topic) {
 
@@ -31,7 +32,11 @@ class TopicListAdapter (private val context: Activity, private val topic: Array<
         timeText.visibility = if (topic[position].startTime.isEmpty()) {View.GONE} else {View.VISIBLE}
         divider.visibility = if (topic[position].startTime.equals(DurationsEnum.START_FIRST_SESSION.value)) {View.VISIBLE} else {View.GONE}
         this.topicController.let {
-            imageView.setOnClickListener { v -> this.topicController!!.removeTopic(topic[position].id) }
+            imageView.tag = topic[position].name
+            imageView.setOnClickListener { v ->
+                this.topicController!!.removeTopic(topic[position].id)
+                Snackbar.make(viewParent, context.getString(R.string.success_removed_topic), Snackbar.LENGTH_LONG).show()
+            }
         }
         imageView.visibility = if(topic[position].dismissible) View.VISIBLE else View.GONE
         durationText.visibility = if(topic[position].minsDuration != 0) View.VISIBLE else View.GONE

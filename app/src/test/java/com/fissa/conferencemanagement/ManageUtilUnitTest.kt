@@ -26,6 +26,11 @@ class ManageUtilUnitTest {
     }
 
     @Test
+    fun wrongFormatEmptyTopic() {
+        assertEquals(ManageUtil().validateTopic(""), false)
+    }
+
+    @Test
     fun correctGenerateTopic() {
         assertEquals(ManageUtil().generateTopicVo("Communicating Over Distance 50min").name, "Communicating Over Distance")
         assertEquals(ManageUtil().generateTopicVo("Communicating Over Distance 50min").minsDuration, 50)

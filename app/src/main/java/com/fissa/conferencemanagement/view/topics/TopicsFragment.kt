@@ -57,7 +57,7 @@ class TopicsFragment() : Fragment(), ITopicsView {
     }
 
     override fun loadTopics(topicsList: Array<TopicVO>) {
-        myListAdapter = TopicListAdapter(this.parentActivity, topicsList, topicController)
+        myListAdapter = TopicListAdapter(this.parentActivity, requireView(), topicsList, topicController)
         listView.adapter = myListAdapter
     }
 

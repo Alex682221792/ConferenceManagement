@@ -20,16 +20,16 @@ class TopicsStore(internal var _context: Context) {
     var topicsQueue: ArrayList<TopicVO>
         get() {
             val listReturn = arrayListOf<TopicVO>()
-            val taxiRequestSet  = introPreference.getStringSet(TOPICS_LIST_KEY, setOf())
-            if (!taxiRequestSet.isNullOrEmpty()){
-                taxiRequestSet.forEach { s ->  listReturn.add(s.toObject())}
+            val topicSet  = introPreference.getStringSet(TOPICS_LIST_KEY, setOf())
+            if (!topicSet.isNullOrEmpty()){
+                topicSet.forEach { s ->  listReturn.add(s.toObject())}
             }
             return listReturn
         }
         set(topicsList) {
-            val taxiResponseSet = topicsList.map { openTravel -> openTravel.toJSON() }.toSet()
+            val topicSet = topicsList.map { openTravel -> openTravel.toJSON() }.toSet()
 
-            editor.putStringSet(TOPICS_LIST_KEY, taxiResponseSet)
+            editor.putStringSet(TOPICS_LIST_KEY, topicSet)
             editor.commit()
         }
 
@@ -37,7 +37,7 @@ class TopicsStore(internal var _context: Context) {
         this.topicsQueue = arrayListOf()
     }
 
-    fun addTaxiRequestToQueue(topic: TopicVO){
+    fun addTopicToQueue(topic: TopicVO){
         var listClone = this.topicsQueue.clone() as ArrayList<TopicVO>
         listClone.add(topic)
         this.topicsQueue = listClone

@@ -49,12 +49,12 @@ class ResultFragment : Fragment(), IResultView {
             listView.visibility = View.GONE
             return
         }
-        myListAdapter = TopicListAdapter(this.parentActivity, topicsList, null)
+        myListAdapter = TopicListAdapter(this.parentActivity, requireView(), topicsList, null)
         listView.adapter = myListAdapter
     }
 
     override fun getActivityContext(): Context {
-        return this.context!!
+        return requireContext()
     }
 
     companion object {

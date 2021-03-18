@@ -1,6 +1,5 @@
 package com.fissa.conferencemanagement.view.topics
 
-import android.util.Log
 import com.fissa.conferencemanagement.R
 import com.fissa.conferencemanagement.logic.util.ManageUtil
 import com.fissa.conferencemanagement.store.TopicsStore
@@ -32,7 +31,7 @@ class TopicsControllerImpl : ITopicsController {
             val manageUtil = ManageUtil()
             if(manageUtil.validateTopic(topic)){
                 val topicVO = manageUtil.generateTopicVo(topic)
-                TopicsStore(this.view!!.getActivityContext()).addTaxiRequestToQueue(topicVO)
+                TopicsStore(this.view!!.getActivityContext()).addTopicToQueue(topicVO)
                 this.getAllTopics()
                 this.view!!.clearForm()
             } else {
